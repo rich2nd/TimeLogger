@@ -9,8 +9,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var time_service_1 = require('/app/services/time.service');
-var TimeDetails_1 = require('/app/data/TimeDetails');
+var time_service_1 = require('../../services/time.service');
+var TimeDetails_1 = require('../../data/TimeDetails');
 var TimeMainComponent = (function () {
     function TimeMainComponent(timesrv) {
         this.timesrv = timesrv;
@@ -46,10 +46,9 @@ var TimeMainComponent = (function () {
             styleUrls: ['./app/controls/main/time.main.css'],
             templateUrl: './app/controls/main/time.main.html'
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof time_service_1.TimeService !== 'undefined' && time_service_1.TimeService) === 'function' && _a) || Object])
+        __metadata('design:paramtypes', [time_service_1.TimeService])
     ], TimeMainComponent);
     return TimeMainComponent;
-    var _a;
 }());
 exports.TimeMainComponent = TimeMainComponent;
 //# sourceMappingURL=time.main.js.map

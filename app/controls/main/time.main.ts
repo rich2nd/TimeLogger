@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { TimeService } from '/app/services/time.service';
-import { TimeDetails } from '/app/data/TimeDetails';
+import { TimeService } from '../../services/time.service';
+import { TimeDetails } from '../../data/TimeDetails';
 
 @Component({
     selector: 'time-main',
