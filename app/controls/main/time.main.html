@@ -1,0 +1,37 @@
+<button [class.btnTimestampStyle]="details.IsClockedIn"
+        [class.btnTimestampClockedOutStyle]="!details.IsClockedIn"
+        (click)="addTimestamp()" [disabled]="!enableAddTimestampButton">TIMESTAMP</button><br />
+<br />
+
+<div style="margin: auto;">
+    <div class="weeklyHoursHeaderStyle">Weekly Hours</div>
+    <div class="weeklyHoursStyle" 
+         [innerText]="details.ThisWeekHoursAsString"></div>
+
+    <br />
+   
+    <div class="generalHoursHeaderStyle">Today Hours</div>
+    <div class="generalHoursStyle"
+         [innerText]="details.TodayHoursAsString"></div>
+    
+    <br />
+    
+    <div class="generalHoursHeaderStyle">Last Week Hours</div>
+    <div class="generalHoursStyle"
+         [innerText]="details.LastWeekHoursAsString"></div>
+
+    <br />
+
+    <div class="generalHoursHeaderStyle">Last Timestamp In (Today)</div>
+    <div class="generalHoursStyle"
+         [innerText]="details.LastClockInTodayAsString"></div>
+
+    <br />
+
+    <div [class.hideStyle]="details.LastClockOutTodayAsString == null || details.LastClockOutTodayAsString.length == 0">
+        <div class="generalHoursHeaderStyle">Last Timestamp Out (Today)</div>
+        <div class="generalHoursStyle"
+             [innerText]="details.LastClockOutTodayAsString"></div>
+    </div>           
+</div>
+

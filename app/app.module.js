@@ -10,16 +10,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
+var http_1 = require('@angular/http');
 var app_component_1 = require('./app.component');
+var time_main_1 = require('./controls/main/time.main');
+var time_service_1 = require('./services/time.service');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            declarations: [app_component_1.AppComponent],
+            imports: [platform_browser_1.BrowserModule, http_1.HttpModule],
+            declarations: [app_component_1.AppComponent, time_main_1.TimeMainComponent],
             bootstrap: [app_component_1.AppComponent],
-            providers: [],
+            providers: [time_service_1.TimeService],
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

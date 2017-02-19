@@ -11,13 +11,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var AppComponent = (function () {
     function AppComponent() {
-        this.first = { content: 'RCM Start App' };
-        this.color = 'green';
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n    <h2>{{first.content}}</h2>\n    <h2 [innerText]=\"first.content\"></h2>\n    <h1 [style.color]=\"color\">{{first.content}}</h1>\n    "
+            template: "<time-main></time-main>",
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

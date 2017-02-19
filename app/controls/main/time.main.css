@@ -1,0 +1,85 @@
+
+.hideStyle {
+    visibility: hidden;
+}
+
+.btnTimestampStyle {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77b55a), color-stop(1, #72b352));
+	background:-moz-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:-webkit-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:-o-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:-ms-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77b55a', endColorstr='#72b352',GradientType=0);
+	background-color:#77b55a;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	border:2px solid #4b8f29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:22px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #5b8a3c;
+    width: 100%;
+}
+.btnTimestampStyle:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btnTimestampClockedOutStyle {
+	-moz-box-shadow: 0px 10px 14px -7px #732727;
+	-webkit-box-shadow: 0px 10px 14px -7px #732727;
+	box-shadow: 0px 10px 14px -7px #732727;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #b35959), color-stop(1, #b35252));
+	background:-moz-linear-gradient(top, #b35959 5%, #b35252 100%);
+	background:-webkit-linear-gradient(top, #b35959 5%, #b35252 100%);
+	background:-o-linear-gradient(top, #b35959 5%, #b35252 100%);
+	background:-ms-linear-gradient(top, #b35959 5%, #b35252 100%);
+	background:linear-gradient(to bottom, #b35959 5%, #b35252 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#b35959', endColorstr='#b35252',GradientType=0);
+	background-color:#b35959;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	border:2px solid #8f2929;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:22px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #8a3d3d;
+    width: 100%;
+}
+.btnTimestampClockedOutStyle:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.weeklyHoursHeaderStyle {    
+    font-size: 8vw;
+    text-align: center;
+}
+
+.weeklyHoursStyle {    
+    font-size: 20vw;
+    text-align: center;
+}
+
+.generalHoursHeaderStyle {        
+    text-align: center;
+}
+
+.generalHoursStyle {   
+    font-size: 20px; 
+    text-align: center;
+}
+
