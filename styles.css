@@ -1,5 +1,90 @@
 body {
     background: rgb(37, 37, 37);
     color: white;
-    font-family:Verdana;
+    font-family: Verdana;
+}
+
+nav {
+    left: 0px;
+    top: 0px;
+    height: auto;
+    width: 100%;
+    background: white;
+    margin-bottom: 10px;
+}
+
+.title {
+    position: absolute; 
+    margin-left: -8px; 
+    margin-right: -8px; 
+    top: -30px; 
+    left: 75px; 
+    width: 100%; 
+    /*text-align: center;*/
+    /*padding-top: 2px;*/
+	font-family: 'Bungee', cursive;
+	font-size:42px;	  
+}
+
+.title-background {
+    background: slategray; 
+    margin-left: -8px; 
+    margin-top: -8px; 
+    margin-right: -8px;
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin-left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  width: 80px;
+  height: 48px;
+  font-size: 0;
+  text-indent: -9999px;
+  cursor: pointer;
+  outline: none;
+  background: none;
+  border: 0;
+}
+
+.hamburger span {
+  display: block;
+  position: absolute;
+  top: 22px;
+  left: 5px;
+  right: 23px;
+  height: 6px;
+  background: white;
+}
+ 
+.hamburger span::before,
+.hamburger span::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-color: white;
+  content: "";
+}
+ 
+.hamburger span::before {
+  top: -15px;
+}
+ 
+.hamburger span::after {
+  bottom: -15px;
+}
+
+.rcmtest {
+    background: blue;
+}
+
+.linkActive {
+    background: red;
 }

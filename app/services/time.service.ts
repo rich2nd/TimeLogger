@@ -27,6 +27,12 @@ export class TimeService {
             .catch(TimeService.handleError);
     }
 
+    public getHistory() : Observable<Response> {
+        return this.http.get(this.url + "/gethistory")
+                            .map((res: Response) => res)
+                            .catch(TimeService.handleError);        
+    }
+
     static handleError(error: Response)
     {
         console.error(error);

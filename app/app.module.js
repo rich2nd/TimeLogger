@@ -11,16 +11,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var http_1 = require('@angular/http');
+var router_1 = require('@angular/router');
 var app_component_1 = require('./app.component');
+var app_menu_1 = require('./controls/menu/app.menu');
 var time_main_1 = require('./controls/main/time.main');
+var time_history_1 = require('./controls/history/time.history');
 var time_service_1 = require('./services/time.service');
+var appRoutes = [
+    { path: '', component: time_main_1.TimeMainComponent },
+    { path: 'history', component: time_history_1.TimeHistoryComponent },
+];
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, http_1.HttpModule],
-            declarations: [app_component_1.AppComponent, time_main_1.TimeMainComponent],
+            imports: [platform_browser_1.BrowserModule, http_1.HttpModule, router_1.RouterModule.forRoot(appRoutes)],
+            declarations: [app_component_1.AppComponent, app_menu_1.AppMenu, time_main_1.TimeMainComponent, time_history_1.TimeHistoryComponent],
             bootstrap: [app_component_1.AppComponent],
             providers: [time_service_1.TimeService],
         }), 

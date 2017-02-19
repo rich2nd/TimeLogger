@@ -9,15 +9,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
 var AppComponent = (function () {
-    function AppComponent() {
+    function AppComponent(router) {
+        this.menuState = 'out';
+        this.parentRouter = router;
     }
+    AppComponent.prototype.toggleMenu = function () {
+        this.menuState = this.menuState === 'out' ? 'in' : 'out';
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "<time-main></time-main>",
+            template: "\n    <div class=\"title-background\">\n        <button class=\"hamburger\" (click)=\"toggleMenu()\">\n            <span>toggle menu</span>        \n        </button>\n    </div>\n    <div class=\"title\">\n        <!-- TIME LOGGER -->\n    </div>\n    \n    <app-menu [@slideInOut]=\"menuState\" (closeMenu)=\"toggleMenu()\"></app-menu>\n\n    <div>\n        <router-outlet></router-outlet>\n    </div>\n    ",
+            animations: [
+                core_1.trigger('slideInOut', [
+                    core_1.state('in', core_1.style({
+                        transform: 'translate3d(0,0,0)'
+                    })),
+                    core_1.state('out', core_1.style({
+                        transform: 'translate3d(100%,0,0)'
+                    })),
+                    core_1.transition('in => out', core_1.animate('400ms ease-in-out')),
+                    core_1.transition('out => in', core_1.animate('400ms ease-in-out'))
+                ]),
+            ]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [router_1.Router])
     ], AppComponent);
     return AppComponent;
 }());

@@ -29,6 +29,11 @@ var TimeService = (function () {
             .map(function (res) { return res; })
             .catch(TimeService.handleError);
     };
+    TimeService.prototype.getHistory = function () {
+        return this.http.get(this.url + "/gethistory")
+            .map(function (res) { return res; })
+            .catch(TimeService.handleError);
+    };
     TimeService.handleError = function (error) {
         console.error(error);
         return Observable_1.Observable.throw(error.json().error || "Server error");

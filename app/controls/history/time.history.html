@@ -1,0 +1,6 @@
+History<br>
+<hr>
+
+<div *ngFor="let item of entryList">
+    {{getDayOfWeek(item)}} {{item | date:'dd-MMM-yyyy h:mm a'}}
+</div>
